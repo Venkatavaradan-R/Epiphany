@@ -2,6 +2,7 @@ import "./App.css";
 import Landing from "./pages/Landing";
 // import react-router
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { TezosProvider } from "./providers/TezosProvider";
 
 function App() {
   return (
@@ -15,7 +16,9 @@ function App() {
 function RouteFulApp() {
   return (
     <BrowserRouter>
-      <App />
+      <TezosProvider>
+        <App />
+      </TezosProvider>
     </BrowserRouter>
   );
 }

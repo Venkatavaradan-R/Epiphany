@@ -5,7 +5,7 @@ import { char2Bytes, bytes2Char } from "@taquito/utils";
 import { MichelsonMap } from "@taquito/taquito";
 import { RpcClient } from "@taquito/rpc";
 
-import { useTezos } from "../TezosProvider";
+import { useTezos } from "../providers/TezosProvider";
 import CustomButton from "../components/CustomButton";
 
 function Landing() {
@@ -62,7 +62,7 @@ function Landing() {
           st.set("1", metadata);
           const op = await contract.methods
             .mint(userAddress, 1000, st, 1)
-            .send({ fee: 10000 });
+            .send({ amount:10 });
           console.log("Op hash:", op.opHash);
           await op.confirmation();
 

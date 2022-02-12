@@ -1,4 +1,5 @@
-const app = require("express")();
+var express = require('express');
+var app = express();
 const pinataSDK = require("@pinata/sdk");
 const fs = require("fs");
 const cors = require("cors");

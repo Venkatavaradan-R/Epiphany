@@ -1,7 +1,6 @@
 import React, { useEffect, useContext, createContext, useState } from "react";
 
 import { TezosToolkit, MichelCodecPacker } from "@taquito/taquito";
-import { TezBridgeSigner } from "@taquito/tezbridge-signer";
 import { char2Bytes, bytes2Char } from "@taquito/utils";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 import { NetworkType } from "@airgap/beacon-sdk";
