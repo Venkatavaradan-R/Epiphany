@@ -74,7 +74,6 @@ export const TezosProvider = ({ children }) => {
         setUserAddress(userAddress_temp);
         Tezos.setWalletProvider(wallet);
         console.log(userAddress_temp);
-        await getUserNfts(userAddress_temp, Tezos);
         setWalletLoading(false);
       })
       .catch(async (err) => {
